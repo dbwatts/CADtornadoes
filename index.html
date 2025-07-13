@@ -1,0 +1,44 @@
+<!-- CRTY 1033: WEB MAPPING, COGS 2025 -->
+<!-- PURPOSE: ASSIGNMENT 4: JavaScript Libraries for Web Mapping Applications (Mapbox) -->
+<!-- DEVELOPER: DEANNE WATTS -->
+<!-- DATE: February 20, 2025 -->
+<!-- VERSION: 1.0 -->
+<!-- NOTES: Additional information, references and support information for this web page can be found in the README.txt file associated with this project -->
+<!-- This map is produced as a portion of the requirements of the GIS: Cartography and Geovisualization program of the Centre of Geographic Sciences, NSCC, Lawrencetown, Nova Scotia. The product is unedited, unverified and intended for educational purposes only. © NSCC COGS, 2025.  -->
+
+<!-- set doctype to html-->
+<!DOCTYPE html>
+<!-- declare language for html -->
+<html lang="en">
+    <!-- head section to specify web page characteristics -->
+    <head>
+        <!-- meta data, set charset to utf-8 -->
+        <meta charset="utf-8">
+        <!-- apply key words to enable searching for page -->
+        <meta name="keywords" content="crty1033, mapbox, tornado events, canadian tornadoes, 2024 tornado events, 2024 canada tornado, 2024 tornadoes, 2023 tornado events, 2023 canada tornado, 2023 tornadoes, tornado">
+        <!-- set characteristics for viewport size -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- add title for web page (tab title) -->
+        <title>2023/2024 Canadian Tornadoes</title>
+        <!-- linking the mapbox api from cdn -->
+        <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" rel="stylesheet">
+        <!-- load mapbox JS -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+        <!-- load minimap js bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/mapbox-gl-globe-minimap@latest/dist/bundle.js"></script>
+        <!-- link to css style sheet in internal folder structure -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- link to google font(s) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=IM+Fell+Great+Primer+SC&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- non-semantic div container to hold web map, called "map"-->
+        <div id="map"></div>
+        <!-- non-semantic div container to hold legend, classed "legend" -->
+        <div id="legend" class="legend"></div>
+        <!-- load js file from internal folder structure (i.e. relative path); housed within body -->
+        <script src="js/script.js"></script>  
+    </body>
+</html>
