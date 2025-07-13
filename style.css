@@ -1,0 +1,140 @@
+/* CRTY 1033: WEB MAPPING, COGS 2025 
+PURPOSE: ASSIGNMENT 4: JavaScript Libraries for Web Mapping Applications (Mapbox)
+DEVELOPER: DEANNE WATTS   
+DATE: February 20, 2025 
+VERSION: 1.0  
+NOTES: NOTES: Additional information, references and support information for this web page can be found in the README.txt file associated with this project */
+
+/*RESET BOCK: This block of code is included in all CSS files to reset key default structure properties*/
+/* asterisk is wildcard selecter, applies formatting to all content */
+* {
+    /* setting size properties of map view */
+    box-sizing: border-box;
+}
+
+/*resetting sizing of web page and borders/padding/margins, creates clean slate for web page  */
+html, 
+body { 
+    /* setting default font size, pading and margin specifications */
+    font-size: 16px;
+    margin: 0; 
+    padding: 0; 
+}
+
+/* specifying parameters for map container, making web map span entire viewport */
+#map { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+/* specifying parameters for the content of the popups */
+.mapboxgl-popup {
+    padding: 1rem;
+    font-size: 14px; 
+    /* specifying line height for enhanced readability */
+    line-height: 1.5; 
+    word-wrap: break-word;
+    /* overflow-wrap: break-word; */ 
+    min-width: 450px; 
+    /* max-width: 90vw; */
+    /* display: inline-block; */
+    text-align: left;
+}
+
+/* specifying font and parameters for heading in popup, different from remaining content */
+h3 {
+    font-family: "Bungee Shade", serif;
+    /* font-weight: 900; */
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-style: normal;
+    color: #365159;
+    line-height: 1.2;
+    white-space: normal;
+    padding: 0rem;
+    margin: 0rem;
+    /* word-break: break-word;  */
+    word-wrap: normal;
+    text-align: center;
+}
+
+/* styling of h4 text (province name) in popup */
+h4 {
+    font-family: "jost", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 0rem;
+    color: #5e747a;
+}
+
+/* specifying font and parameters for remaining content within popup */
+.mapboxgl-popup-content {
+    /* font: 16px "IM Fell Great Primer SC", Arial, Helvetica, sans-serif; */
+    padding: 1rem;
+    border-radius: 5px;
+    background: #c3cbcd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: #365159;
+    font-family: "jost", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    /* word-wrap: break-word; Make sure content wraps when needed */
+    /* overflow-wrap: break-word; */
+}
+
+/* specifying parameters for legend */
+.legend {
+    position: absolute;
+    background: #c3cbcd; 
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 5px;
+    color: #365159;
+    font-family: "jost", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100; /* high z-index value to make legend appear above the map*/
+}
+
+/* specifying characteristics of legend content items, applying justification */
+.legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* styling height and width of marker icon in legend */
+.legend img {
+    width: 60px;
+    height: 60px;
+    /* specifying margin to the right of icon, spacing the text from the icon */
+    margin-right: 25px;
+}
+
+/* specifying background colour for all widget buttons */
+.mapboxgl-ctrl-icon {
+    background-color: #c3cbcd;
+}
+
+/* specifying parameters for scalebar */
+.mapboxgl-ctrl.mapboxgl-ctrl-scale {    
+    color: #08313e;
+    /* specifying offset x, offset y, blur effect */
+    text-shadow: 1px 1px 5px #eec64e;
+    font-size: 30px;
+    font-family: "Bungee Shade", serif;
+    font-weight: 900;
+    background-color: #36515900;
+    padding: 1rem;
+    border-bottom: 4px solid #f0cf6e;
+    border-left: 1.5px solid #f0cf6e ;
+    border-right: 1.5px solid #f0cf6e;
+    border-top: none;
+    height: 5px; 
+    line-height: 0px;
+}
